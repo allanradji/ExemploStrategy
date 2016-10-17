@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vendas.FXMLDocumentController">
+    <children>
+      <Button layoutX="355.0" layoutY="277.0" mnemonicParsing="false" text="Fechar Venda" />
+      <Button layoutX="470.0" layoutY="277.0" mnemonicParsing="false" text="Cancelar" />
+      <Label layoutX="529.0" layoutY="46.0" prefHeight="25.0" prefWidth="134.0" text="Total da venda:" />
+      <ComboBox id="produtosEmEstoque" fx:id="produtosEmEstoque" layoutX="86.0" layoutY="59.0" onAction="#mostrarValorProdutoUnitario" prefHeight="25.0" prefWidth="358.0" promptText="--- Selecione um Produto em Estoque ---" />
+      <Button layoutX="195.0" layoutY="277.0" mnemonicParsing="false" text="Adicionar ao Carrinho" />
+      <TableView layoutX="6.0" layoutY="333.0" prefHeight="200.0" prefWidth="767.0">
+        <columns>
+          <TableColumn prefWidth="468.0" text="Item Vendido" />
+          <TableColumn minWidth="0.0" prefWidth="139.0" text="Valor" />
+            <TableColumn prefWidth="234.0" text="Comissão" />
+        </columns>
+      </TableView>
+      <Label layoutX="86.0" layoutY="29.0" prefHeight="17.0" prefWidth="77.0" text="Produto:" />
+      <TextField fx:id="quantidadeProduto" layoutX="86.0" layoutY="137.0" onAction="#mutiplicarValorQuantidadeProduto" onKeyReleased="#mutiplicarValorQuantidadeProduto" prefHeight="25.0" prefWidth="77.0" text="1" />
+      <Label layoutX="86.0" layoutY="112.0" prefHeight="17.0" prefWidth="69.0" text="Quantidade:" />
+      <Label layoutX="237.0" layoutY="112.0" text="Valor Unitário:" />
+      <Label layoutX="355.0" layoutY="112.0" text="Valor Total:" />
+      <Label fx:id="valorProduto" alignment="CENTER" layoutX="246.0" layoutY="137.0" prefHeight="25.0" prefWidth="53.0" />
+      <Label fx:id="valorTotalVenda" layoutX="566.0" layoutY="85.0" prefHeight="50.0" prefWidth="60.0">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="489.0" layoutY="85.0" text="R$">
+         <font>
+            <Font name="Arial Black" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="valorTotalProduto" layoutX="374.0" layoutY="141.0" prefHeight="25.0" prefWidth="38.0" />
+      <Label fx:id="valorTotalProduto" layoutX="362.0" layoutY="141.0" />
+    </children>
+</AnchorPane>
